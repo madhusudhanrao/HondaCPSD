@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="HelloBpelProcess" targetNamespace="http://HelloWorldBuild/HelloBpelProcessArtifacts" xmlns:plnk="http://schemas.xmlsoap.org/ws/2004/03/partner-link/" xmlns:tns="http://HelloWorldBuild/HelloBpelProcessArtifacts" xmlns:wsdl0="http://HelloWorldBuild/GreetInterface" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <plnk:partnerLinkType name="GreetInterfacePLT">
+    <plnk:role name="Interface">
+      <plnk:portType name="wsdl0:GreetInterface"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+    <wsdl:import location="GreetInterface.wsdl" namespace="http://HelloWorldBuild/GreetInterface"/>
+</wsdl:definitions>

@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>BuildDemo</groupId>
+	<artifactId>HelloWorldBuild</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>HelloWorldBuild Module</name>
+
+	<build>
+		<plugins>
+			<!-- PLUGIN SCRIPT FOR GENERATTING PROJECT INTERCHANGE FOR THE ASSOCIATED 
+				MODULE -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<!-- <goal>attached</goal> -->
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/assembly/project-interchange.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>      <!-- END OF PROJECT INTERCHANGE FILE CREATION -->
+
+			<!-- PLUGIN SCRIPT FOR GENERATTING EAR FOR THE ASSOCIATED MODULE COMPATIBALE 
+				TO WEBSPHERER PROCESS SERVER -->
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>was6-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<id>servicedeploy-ear</id>
+							<echo message="${project.build.directory}" />
+							<wasHome>${env.WAS_HOME}</wasHome>
+							<echo message="${env.WAS_HOME}" />
+							<scaModule>${project.build.directory}/${project.artifactId}-${project.version}-project-interchange.zip</scaModule>
+							<outputApplication>${project.build.directory}</outputApplication>
+							<!--<outputApplication>${project.build.directory}/${project.artifactId}-${project.version}.ear</outputApplication> -->
+							<workspaceDirectory>/tmp</workspaceDirectory>
+							<skipXsdValidate>true</skipXsdValidate>
+							<!-- NOTE: skipXsdValidate sholud be false for WPS V6.1, and it should 
+								be true for WPS v6.1.2 and above -->
+						</configuration>
+						<goals>
+							<goal>servicedeploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- END OF EAR FILE CREATION -->
+			<!-- This plugin can only copy files, not directories. -->
+			<plugin>
+				<groupId>com.coderplus.maven.plugins</groupId>
+				<artifactId>copy-rename-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<id>copy-file</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<!-- <sourceFile>${project.build.directory}/*.ear</sourceFile> <destinationFile>C:/WIDworkspace/RepoArtifacts</destinationFile> -->
+							<fileSets>
+								<fileSet>
+									<sourceFile>${project.build.directory}/${project.artifactId}.ear</sourceFile>
+									<destinationFile>C:/WIDworkspace/RepoArtifacts</destinationFile>
+								</fileSet>
+								<fileSet>
+									<sourceFile>${project.build.directory}/*.zip</sourceFile>
+									<destinationFile>C:/WIDworkspace/RepoArtifacts</destinationFile>
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<project name="scaDeploy" default="main" basedir=".">
+	<taskdef name="serviceDeploy" classname="com.ibm.websphere.ant.tasks.ServiceDeployTask"/>
+	<target name="main">
+	<servicedeploy scaModule="HelloWorldBuild.jar" keep="true" ignoreErrors="true" outputApplications="HelloWorldBuild.ear" workingDirectory="." noJ2eeDeploy="true" freeform="true"/>
+	</target>
+</project>

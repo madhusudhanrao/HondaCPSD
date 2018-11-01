@@ -1,0 +1,33 @@
+
+<assembly>
+  <id>project-interchange</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <baseDirectory>${artifactId}</baseDirectory>
+  <includeBaseDirectory>false</includeBaseDirectory> 
+
+  <fileSets>
+    <fileSet>
+      <directory>.</directory>
+      <outputDirectory>${artifactId}</outputDirectory>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <excludes>
+        <exclude>**/target/**</exclude>
+        <exclude>**/src/assembly/**</exclude>
+      </excludes>
+    </fileSet>
+  </fileSets>
+
+  <dependencySets>
+  <dependencySet>
+      <outputFileNameMapping></outputFileNameMapping>
+      <unpack>true</unpack>
+   <includes>
+ </includes>
+    </dependencySet>
+  </dependencySets>
+</assembly>
+
+
+

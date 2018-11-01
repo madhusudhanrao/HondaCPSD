@@ -1,0 +1,724 @@
+[11/1/18 11:25:10:744 IST]     FFDC Exception:java.net.UnknownHostException SourceId:com.ibm.ws.ar.util.ArtifactURIConverter.createInputStream ProbeId:95 Reporter:com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter@54044775
+java.net.UnknownHostException: com.ibm.wbit.stickyboard.model
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:209)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:192)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:404)
+	at java.net.Socket.connect(Socket.java:643)
+	at java.net.Socket.connect(Socket.java:590)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:193)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:462)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:557)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:226)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:329)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:347)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1011)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:947)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:865)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1314)
+	at org.eclipse.emf.ecore.resource.impl.URIConverterImpl.createURLInputStream(URIConverterImpl.java:566)
+	at org.eclipse.emf.ecore.resource.impl.URIConverterImpl.createInputStream(URIConverterImpl.java:453)
+	at com.ibm.wsspi.ar.ArtifactURIConverter.createInputStream(ArtifactURIConverter.java:133)
+	at com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter.createInputStream(NormalizingArtifactURIConverter.java:60)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2292)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2186)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromTypeName(XMLHandler.java:1844)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:1802)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1608)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:898)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:82)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:873)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:641)
+	at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:193)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:179)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1094)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:900)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:249)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:264)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:390)
+	at com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingResourceSetImpl.getResource(NormalizingResourceSetImpl.java:36)
+	at com.ibm.bpe.validation.BPELValidation.<init>(BPELValidation.java:578)
+	at com.ibm.bpe.validation.BPELValidation.validateBPELProcess(BPELValidation.java:1034)
+	at com.ibm.bpe.validation.BPELValidationTask.execute(BPELValidationTask.java:94)
+	at com.ibm.ws.bpm.cmdfrmwrk.task.WBILazyInstantiationTask.invokeTask(WBILazyInstantiationTask.java:322)
+	at com.ibm.ws.bpm.cmdfrmwrk.task.WBILazyInstantiationTask.execute(WBILazyInstantiationTask.java:255)
+	at com.ibm.ws.bpm.cmdfrmwrk.task.WBIInstallFrameworkTask.executeTasks(WBIInstallFrameworkTask.java:92)
+	at com.ibm.ws.bpm.cmdfrmwrk.task.WBIInstallFrameworkTask.performTask(WBIInstallFrameworkTask.java:55)
+	at com.ibm.ws.bpm.deploy.delegator.DelegatingTaskProvider.delegatePerformTask(DelegatingTaskProvider.java:458)
+	at com.ibm.ws.bpm.servicedeploy.applications.ServiceDeployApplication.runTasks(ServiceDeployApplication.java:637)
+	at com.ibm.ws.bpm.servicedeploy.applications.ServiceDeployApplication.run(ServiceDeployApplication.java:305)
+	at com.ibm.ws.bpm.servicedeploy.applications.ServiceDeployApplication.main(ServiceDeployApplication.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:95)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:56)
+	at java.lang.reflect.Method.invoke(Method.java:620)
+	at com.ibm.wsspi.bootstrap.WSLauncher.launchMain(WSLauncher.java:234)
+	at com.ibm.wsspi.bootstrap.WSLauncher.main(WSLauncher.java:96)
+	at com.ibm.wsspi.bootstrap.WSLauncher.run(WSLauncher.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:95)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:56)
+	at java.lang.reflect.Method.invoke(Method.java:620)
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.callMethodWithException(EclipseAppContainer.java:587)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:198)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:95)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:56)
+	at java.lang.reflect.Method.invoke(Method.java:620)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:340)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:282)
+	at org.eclipse.core.launcher.Main.run(Main.java:981)
+	at com.ibm.wsspi.bootstrap.WSPreLauncher.launchEclipse(WSPreLauncher.java:401)
+	at com.ibm.wsspi.bootstrap.WSPreLauncher.main(WSPreLauncher.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:95)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:56)
+	at java.lang.reflect.Method.invoke(Method.java:620)
+	at com.ibm.ws.bpm.servicedeploy.main.ServiceDeployLauncher.startup(ServiceDeployLauncher.java:178)
+	at com.ibm.ws.bpm.servicedeploy.main.ServiceDeployMain.startup(ServiceDeployMain.java:43)
+	at com.ibm.ws.bpm.servicedeploy.main.ServiceDeployMain.main(ServiceDeployMain.java:75)
+
+CapturedDataElements begin
+arg BEGIN:com.ibm.ws.ffdc.impl.DMAdapter@7f4f8e3c
+Reporter BEGIN:com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter@54044775
+ org.eclipse.emf.ecore.resource.impl.URIConverterImpl::workspaceRoot BEGIN:org.eclipse.core.internal.resources.WorkspaceRoot@4ce394bb
+  org.eclipse.core.internal.resources.Resource::path BEGIN:org.eclipse.core.runtime.Path@4cb5daac
+   org.eclipse.core.runtime.Path::HAS_LEADING:1
+   org.eclipse.core.runtime.Path::IS_UNC:2
+   org.eclipse.core.runtime.Path::HAS_TRAILING:4
+   org.eclipse.core.runtime.Path::ALL_SEPARATORS:7
+   org.eclipse.core.runtime.Path::EMPTY_STRING:
+    org.eclipse.core.runtime.Path::NO_SEGMENTS:[Ljava.lang.String;@1caebfe3 depth limit reached
+    org.eclipse.core.runtime.Path::EMPTY:org.eclipse.core.runtime.Path@289ca51a depth limit reached
+   org.eclipse.core.runtime.Path::HASH_MASK:-5
+   org.eclipse.core.runtime.Path::ROOT_STRING:/
+   org.eclipse.core.runtime.Path::ROOT:org.eclipse.core.runtime.Path@4cb5daac
+   org.eclipse.core.runtime.Path::WINDOWS:true
+   org.eclipse.core.runtime.Path::device:null
+   org.eclipse.core.runtime.Path::segments:[Ljava.lang.String;@1caebfe3
+   org.eclipse.core.runtime.Path::separators:137
+   END:org.eclipse.core.runtime.Path@4cb5daac
+
+  org.eclipse.core.internal.resources.Resource::workspace BEGIN:org.eclipse.core.internal.resources.Workspace@8998568f
+   org.eclipse.core.internal.resources.Workspace::caseSensitive:false
+   org.eclipse.core.internal.resources.Workspace::DEBUG:false
+    org.eclipse.core.internal.resources.Workspace::_workManager:org.eclipse.core.internal.resources.WorkManager@befdfd76 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::aliasManager:org.eclipse.core.internal.resources.AliasManager@f0570747 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::buildManager:org.eclipse.core.internal.events.BuildManager@6b49b803 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::buildOrder:null
+    org.eclipse.core.internal.resources.Workspace::charsetManager:org.eclipse.core.internal.resources.CharsetManager@42a002cf depth limit reached
+    org.eclipse.core.internal.resources.Workspace::contentDescriptionManager:org.eclipse.core.internal.resources.ContentDescriptionManager@3756b259 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::crashed:false
+   org.eclipse.core.internal.resources.Workspace::defaultRoot:org.eclipse.core.internal.resources.WorkspaceRoot@4ce394bb
+    org.eclipse.core.internal.resources.Workspace::description:org.eclipse.core.internal.resources.WorkspacePreferences@631bc8f1 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::fileSystemManager:org.eclipse.core.internal.localstore.FileSystemResourceManager@1d1f9d36 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::lifecycleListeners:java.util.HashSet@a0afe53e depth limit reached
+    org.eclipse.core.internal.resources.Workspace::localMetaArea:org.eclipse.core.internal.resources.LocalMetaArea@6235342e depth limit reached
+    org.eclipse.core.internal.resources.Workspace::locationValidator:org.eclipse.core.internal.resources.LocationValidator@5262bd0f depth limit reached
+    org.eclipse.core.internal.resources.Workspace::markerManager:org.eclipse.core.internal.resources.MarkerManager@26f4100 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::moveDeleteHook:null
+    org.eclipse.core.internal.resources.Workspace::natureManager:org.eclipse.core.internal.resources.NatureManager@ac204e4 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::nextMarkerId:0
+   org.eclipse.core.internal.resources.Workspace::nextNodeId:2
+    org.eclipse.core.internal.resources.Workspace::notificationManager:org.eclipse.core.internal.events.NotificationManager@8e0cefac depth limit reached
+   org.eclipse.core.internal.resources.Workspace::openFlag:true
+   org.eclipse.core.internal.resources.Workspace::operationTree:null
+    org.eclipse.core.internal.resources.Workspace::pathVariableManager:org.eclipse.core.internal.resources.PathVariableManager@d579ee44 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::propertyManager:org.eclipse.core.internal.properties.PropertyManager2@e37cb27e depth limit reached
+    org.eclipse.core.internal.resources.Workspace::refreshManager:org.eclipse.core.internal.refresh.RefreshManager@913485b2 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::ruleFactory:org.eclipse.core.internal.resources.Rules@33040323 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::saveManager:org.eclipse.core.internal.resources.SaveManager@4a847890 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::shouldValidate:true
+    org.eclipse.core.internal.resources.Workspace::stringPoolJob:org.eclipse.core.internal.utils.StringPoolJob@835dbee7 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::synchronizer:org.eclipse.core.internal.resources.Synchronizer@b5cf2a50 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::teamHook:org.eclipse.core.internal.resources.Workspace$3@451f0872 depth limit reached
+    org.eclipse.core.internal.resources.Workspace::tree:org.eclipse.core.internal.watson.ElementTree@bb33c518 depth limit reached
+   org.eclipse.core.internal.resources.Workspace::treeLocked:null
+   org.eclipse.core.internal.resources.Workspace::validator:null
+   END:org.eclipse.core.internal.resources.Workspace@8998568f
+
+  org.eclipse.core.internal.resources.Resource::class$0:class org.eclipse.core.internal.resources.WorkManager$NotifyRule
+  org.eclipse.core.internal.resources.WorkspaceRoot::projectTable BEGIN:java.util.Collections$SynchronizedMap@104c7d43
+   {
+   }
+   END:java.util.Collections$SynchronizedMap@104c7d43
+
+  org.eclipse.core.internal.resources.WorkspaceRoot::workspaceLocation BEGIN:org.eclipse.core.runtime.Path@8c5c9717
+   org.eclipse.core.runtime.Path::HAS_LEADING:1
+   org.eclipse.core.runtime.Path::IS_UNC:2
+   org.eclipse.core.runtime.Path::HAS_TRAILING:4
+   org.eclipse.core.runtime.Path::ALL_SEPARATORS:7
+   org.eclipse.core.runtime.Path::EMPTY_STRING:
+   org.eclipse.core.runtime.Path::NO_SEGMENTS:[Ljava.lang.String;@1caebfe3
+   org.eclipse.core.runtime.Path::EMPTY:org.eclipse.core.runtime.Path@289ca51a
+   org.eclipse.core.runtime.Path::HASH_MASK:-5
+   org.eclipse.core.runtime.Path::ROOT_STRING:/
+   org.eclipse.core.runtime.Path::ROOT:org.eclipse.core.runtime.Path@4cb5daac
+   org.eclipse.core.runtime.Path::WINDOWS:true
+   org.eclipse.core.runtime.Path::device:C:
+    org.eclipse.core.runtime.Path::segments:[Ljava.lang.String;@83c09fe depth limit reached
+   org.eclipse.core.runtime.Path::separators:129356249
+   END:org.eclipse.core.runtime.Path@8c5c9717
+
+  END:org.eclipse.core.internal.resources.WorkspaceRoot@4ce394bb
+
+ org.eclipse.emf.ecore.resource.impl.URIConverterImpl::uriMap:null
+ com.ibm.wsspi.ar.ArtifactURIConverter::COPYRIGHT:(C) Copyright IBM Corporation 2004, 2014.
+ com.ibm.wsspi.ar.ArtifactURIConverter::INSTANCE BEGIN:com.ibm.wsspi.ar.ArtifactURIConverter@972485a5
+  org.eclipse.emf.ecore.resource.impl.URIConverterImpl::workspaceRoot:org.eclipse.core.internal.resources.WorkspaceRoot@4ce394bb
+  org.eclipse.emf.ecore.resource.impl.URIConverterImpl::uriMap:null
+  com.ibm.wsspi.ar.ArtifactURIConverter::COPYRIGHT:(C) Copyright IBM Corporation 2004, 2014.
+  com.ibm.wsspi.ar.ArtifactURIConverter::INSTANCE:com.ibm.wsspi.ar.ArtifactURIConverter@972485a5
+  com.ibm.wsspi.ar.ArtifactURIConverter::ARCHIVE_PROTOCOL:archive
+  com.ibm.wsspi.ar.ArtifactURIConverter::CLASS:com.ibm.wsspi.ar.ArtifactURIConverter
+  com.ibm.wsspi.ar.ArtifactURIConverter::l:java.util.logging.Logger@28dfc032
+  END:com.ibm.wsspi.ar.ArtifactURIConverter@972485a5
+
+ com.ibm.wsspi.ar.ArtifactURIConverter::ARCHIVE_PROTOCOL:archive
+ com.ibm.wsspi.ar.ArtifactURIConverter::CLASS:com.ibm.wsspi.ar.ArtifactURIConverter
+ com.ibm.wsspi.ar.ArtifactURIConverter::l:java.util.logging.Logger@28dfc032
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::COPYRIGHT:(C) Copyright IBM Corporation 2009, 2010
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::FILE_PROTOCOL:file
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::JAR_PROTOCOL:jar
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::MEDNODE_PROTOCOL:mednode
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::MEDNODE_SUFFIX:.mednode
+ com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter::cached BEGIN:java.util.HashMap@3f41af01
+  {
+  key BEGIN:org.eclipse.emf.common.util.URI@a6a7e18
+   org.eclipse.emf.common.util.URI::hashCode:1092350146
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/HelloBpelProcessArtifacts.wsdl
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@30893412 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+    org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c depth limit reached
+    org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c depth limit reached
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+    org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67 depth limit reached
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+    org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc depth limit reached
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@a6a7e18
+
+  value:org.eclipse.emf.common.util.URI@a6a7e18
+  key BEGIN:org.eclipse.emf.common.util.URI@7f1b3f4d
+   org.eclipse.emf.common.util.URI::hashCode:-812772832
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/HelloBpelProcess.bpel
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@d3c9c0e7 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@7f1b3f4d
+
+  value:org.eclipse.emf.common.util.URI@7f1b3f4d
+  key BEGIN:org.eclipse.emf.common.util.URI@589d3679
+   org.eclipse.emf.common.util.URI::hashCode:885768370
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/sca.module
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@9fac8b8e depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@589d3679
+
+  value:org.eclipse.emf.common.util.URI@589d3679
+  key BEGIN:org.eclipse.emf.common.util.URI@4a7766f1
+   org.eclipse.emf.common.util.URI::hashCode:308023577
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/GreetInterface.wsdl
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@c95f0eb6 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@4a7766f1
+
+  value:org.eclipse.emf.common.util.URI@4a7766f1
+  key BEGIN:org.eclipse.emf.common.util.URI@874fcf74
+   org.eclipse.emf.common.util.URI::hashCode:366639157
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/HelloBpelProcess.bpelex
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@43c74d25 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@874fcf74
+
+  value:org.eclipse.emf.common.util.URI@874fcf74
+  key BEGIN:org.eclipse.emf.common.util.URI@a825f97d
+   org.eclipse.emf.common.util.URI::hashCode:668275005
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:http
+   org.eclipse.emf.common.util.URI::authority:com.ibm.wbit.stickyboard.model
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:http://com.ibm.wbit.stickyboard.model/model/StickyBoard.xsd
+   org.eclipse.emf.common.util.URI::device:null
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@24de9920 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@a825f97d
+
+  value:org.eclipse.emf.common.util.URI@a825f97d
+  key BEGIN:org.eclipse.emf.common.util.URI@57817f32
+   org.eclipse.emf.common.util.URI::hashCode:-1173045268
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/HelloBpelProcess.component
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@ac25360c depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@57817f32
+
+  value:org.eclipse.emf.common.util.URI@57817f32
+  key BEGIN:org.eclipse.emf.common.util.URI@4e9efbd9
+   org.eclipse.emf.common.util.URI::hashCode:-35599577
+   org.eclipse.emf.common.util.URI::hierarchical:true
+   org.eclipse.emf.common.util.URI::scheme:file
+   org.eclipse.emf.common.util.URI::authority:null
+   org.eclipse.emf.common.util.URI::fragment:null
+   org.eclipse.emf.common.util.URI::cachedTrimFragment:null
+   org.eclipse.emf.common.util.URI::cachedToString:file:/C:/WIDworkspace/1/HelloWorldBuild/target/was6-maven-plugin/166cdd6cbef/.metadata/temp/app.wbi166cdd6f593/ear_ext/sd.ear/HelloWorldBuild.jar/sca.module.attributes
+   org.eclipse.emf.common.util.URI::device:C:
+   org.eclipse.emf.common.util.URI::absolutePath:true
+    org.eclipse.emf.common.util.URI::segments:[Ljava.lang.String;@6353c125 depth limit reached
+   org.eclipse.emf.common.util.URI::query:null
+   org.eclipse.emf.common.util.URI::uriCache:org.eclipse.emf.common.util.URI$1@51dbd35c
+   org.eclipse.emf.common.util.URI::archiveSchemes:java.util.Collections$UnmodifiableSet@6037879c
+   org.eclipse.emf.common.util.URI::SCHEME_FILE:file
+   org.eclipse.emf.common.util.URI::SCHEME_JAR:jar
+   org.eclipse.emf.common.util.URI::SCHEME_ZIP:zip
+   org.eclipse.emf.common.util.URI::SCHEME_ARCHIVE:archive
+   org.eclipse.emf.common.util.URI::SEGMENT_EMPTY:
+   org.eclipse.emf.common.util.URI::SEGMENT_SELF:.
+   org.eclipse.emf.common.util.URI::SEGMENT_PARENT:..
+   org.eclipse.emf.common.util.URI::NO_SEGMENTS:[Ljava.lang.String;@58130c67
+   org.eclipse.emf.common.util.URI::SCHEME_SEPARATOR::
+   org.eclipse.emf.common.util.URI::AUTHORITY_SEPARATOR://
+   org.eclipse.emf.common.util.URI::DEVICE_IDENTIFIER::
+   org.eclipse.emf.common.util.URI::SEGMENT_SEPARATOR:/
+   org.eclipse.emf.common.util.URI::QUERY_SEPARATOR:?
+   org.eclipse.emf.common.util.URI::FRAGMENT_SEPARATOR:#
+   org.eclipse.emf.common.util.URI::USER_INFO_SEPARATOR:@
+   org.eclipse.emf.common.util.URI::PORT_SEPARATOR::
+   org.eclipse.emf.common.util.URI::FILE_EXTENSION_SEPARATOR:.
+   org.eclipse.emf.common.util.URI::ARCHIVE_IDENTIFIER:!
+   org.eclipse.emf.common.util.URI::ARCHIVE_SEPARATOR:!/
+   org.eclipse.emf.common.util.URI::ESCAPE:%
+   org.eclipse.emf.common.util.URI::HEX_DIGITS:[C@d276abfc
+   org.eclipse.emf.common.util.URI::ALPHA_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHA_LO:0
+   org.eclipse.emf.common.util.URI::DIGIT_HI:0
+   org.eclipse.emf.common.util.URI::DIGIT_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::ALPHANUM_HI:576460743847706622
+   org.eclipse.emf.common.util.URI::ALPHANUM_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::HEX_HI:541165879422
+   org.eclipse.emf.common.util.URI::HEX_LO:287948901175001088
+   org.eclipse.emf.common.util.URI::UNRESERVED_HI:5188146764422578174
+   org.eclipse.emf.common.util.URI::UNRESERVED_LO:288062709218410496
+   org.eclipse.emf.common.util.URI::RESERVED_HI:1
+   org.eclipse.emf.common.util.URI::RESERVED_LO:-6052670429821140992
+   org.eclipse.emf.common.util.URI::URIC_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::URIC_LO:-5764607720602730496
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::SEGMENT_CHAR_LO:3458623578763689984
+   org.eclipse.emf.common.util.URI::PATH_CHAR_HI:5188146764422578175
+   org.eclipse.emf.common.util.URI::PATH_CHAR_LO:3458764316252045312
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_HI:0
+   org.eclipse.emf.common.util.URI::MAJOR_SEPARATOR_LO:-8935000888854970368
+   org.eclipse.emf.common.util.URI::SEGMENT_END_HI:0
+   org.eclipse.emf.common.util.URI::SEGMENT_END_LO:-9223231265006682112
+   org.eclipse.emf.common.util.URI::ENCODE_PLATFORM_RESOURCE_URIS:false
+   org.eclipse.emf.common.util.URI::FRAGMENT_NONE:0
+   org.eclipse.emf.common.util.URI::FRAGMENT_FIRST_SEPARATOR:1
+   org.eclipse.emf.common.util.URI::FRAGMENT_LAST_SEPARATOR:2
+   END:org.eclipse.emf.common.util.URI@4e9efbd9
+
+  value:org.eclipse.emf.common.util.URI@4e9efbd9
+  }
+  END:java.util.HashMap@3f41af01
+
+ END:com.ibm.ws.bpm.cmdfrmwrk.resource.NormalizingArtifactURIConverter@54044775
+
+END:com.ibm.ws.ffdc.impl.DMAdapter@7f4f8e3c
+
+CapturedDataElements end
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1    11/1/18 11:25:10:734 IST    11/1/18 11:25:10:734 IST java.net.UnknownHostException com.ibm.ws.ar.util.ArtifactURIConverter.createInputStream 95
+------+------+---------------------------+---------------------------+---------------------------

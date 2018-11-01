@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><bpws:process xmlns:bpws="http://schemas.xmlsoap.org/ws/2004/03/business-process/" xmlns:ns="http://HelloWorldBuild/HelloBpelProcessArtifacts" xmlns:ns0="http://HelloWorldBuild/GreetInterface" xmlns:wpc="http://www.ibm.com/xmlns/prod/websphere/business-process/6.0.0/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.ibm.com/xmlns/prod/websphere/business-process/expression-lang/java/6.0.0/" name="HelloBpelProcess" suppressJoinFailure="yes" targetNamespace="http://HelloWorldBuild" wpc:continueOnError="no" wpc:displayName="HelloBpelProcess" wpc:executionMode="microflow" wpc:id="1" wpc:validFrom="2017-11-08T06:41:08" wpc:version="IBM_8.5.500">
+  <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" location="GreetInterface.wsdl" namespace="http://HelloWorldBuild/GreetInterface"/>
+  <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" location="HelloBpelProcessArtifacts.wsdl" namespace="http://HelloWorldBuild/HelloBpelProcessArtifacts"/>
+  <bpws:partnerLinks>
+    <bpws:partnerLink myRole="Interface" name="GreetInterface" partnerLinkType="ns:GreetInterfacePLT" wpc:id="2"/>
+  </bpws:partnerLinks>
+  <bpws:variables>
+    <bpws:variable name="input" type="xsd:string" wpc:id="6"/>
+    <bpws:variable name="output" type="xsd:string" wpc:id="7"/>
+  </bpws:variables>
+  <bpws:sequence name="HiddenSequence" wpc:id="1073741827">
+    <bpws:receive createInstance="yes" name="Receive" operation="sayHello" partnerLink="GreetInterface" portType="ns0:GreetInterface" wpc:displayName="Receive" wpc:id="4" wpc:transactionalBehavior="commitAfter">
+      <wpc:output>
+        <wpc:parameter name="input" variable="input"/>
+      </wpc:output>
+    </bpws:receive>
+    <bpws:invoke name="Snippet" operation="null" partnerLink="null" portType="wpc:null" wpc:continueOnError="inherit" wpc:displayName="hello" wpc:id="8">
+      <wpc:script>
+        <wpc:javaCode><![CDATA[java.lang.String __result__1 = "Hello..";
+java.lang.String __result__3;
+{// append text
+	__result__3 = __result__1.concat(input);
+}
+output = __result__3;
+
+//@generated:com.ibm.wbit.activity.ui
+//<?xml version="1.0" encoding="UTF-8"?>
+//<com.ibm.wbit.activity:CompositeActivity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.wbit.activity="http:///com/ibm/wbit/activity.ecore" name="ActivityMethod">
+//  <exceptions>
+//    <type xsi:type="com.ibm.wbit.activity:JavaElementType" name="com.ibm.bpe.api.ProcessException"/>
+//  </exceptions>
+//  <executableElements xsi:type="com.ibm.wbit.activity:Expression" value="&quot;Hello..&quot;" assignable="false">
+//    <dataOutputs target="//@executableElements.2/@parameters.0"/>
+//    <type xsi:type="com.ibm.wbit.activity:XSDElementType" name="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+//  </executableElements>
+//  <executableElements xsi:type="com.ibm.wbit.activity:Expression" value="input" variable="true">
+//    <dataOutputs target="//@executableElements.2/@parameters.1"/>
+//    <type xsi:type="com.ibm.wbit.activity:XSDElementType" name="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+//  </executableElements>
+//  <executableElements xsi:type="com.ibm.wbit.activity:LibraryActivity" name="append text" description="Combine the text of two words into one word" category="text" template="&lt;%return%> &lt;%input1%>.concat(&lt;%input2%>);">
+//    <parameters name="input1" dataInputs="//@executableElements.0/@dataOutputs.0" displayName="input 1">
+//      <type xsi:type="com.ibm.wbit.activity:JavaElementType" name="java.lang.String"/>
+//    </parameters>
+//    <parameters name="input2" dataInputs="//@executableElements.1/@dataOutputs.0" displayName="input 2">
+//      <type xsi:type="com.ibm.wbit.activity:JavaElementType" name="java.lang.String"/>
+//    </parameters>
+//    <result name="combined text" displayName="combined text">
+//      <dataOutputs target="//@executableElements.3"/>
+//      <type xsi:type="com.ibm.wbit.activity:JavaElementType" name="java.lang.String"/>
+//    </result>
+//  </executableElements>
+//  <executableElements xsi:type="com.ibm.wbit.activity:Expression" dataInputs="//@executableElements.2/@result/@dataOutputs.0" value="output" variable="true">
+//    <type xsi:type="com.ibm.wbit.activity:XSDElementType" name="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+//  </executableElements>
+//  <executableGroups executableElements="//@executableElements.0 //@executableElements.1 //@executableElements.2 //@executableElements.3"/>
+//</com.ibm.wbit.activity:CompositeActivity>
+//@generated:end
+//!SMAP!*S WBIACTDBG
+//!SMAP!*L
+//!SMAP!1:1,1
+//!SMAP!3:2,4
+//!SMAP!4:6,1
+//!SMAP!1000000:46,1]]></wpc:javaCode>
+      </wpc:script>
+    </bpws:invoke>
+    <bpws:reply name="Reply" operation="sayHello" partnerLink="GreetInterface" portType="ns0:GreetInterface" wpc:displayName="Reply" wpc:id="5">
+      <wpc:input>
+        <wpc:parameter name="output" variable="output"/>
+      </wpc:input>
+    </bpws:reply>
+  </bpws:sequence>
+</bpws:process>
