@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GreetInterfaceExport1_GreetInterfaceHttp_Service" targetNamespace="http://HelloWorldBuild/GreetInterface" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://HelloWorldBuild/GreetInterface">
+  <wsdl:import location="GreetInterface.wsdl" namespace="http://HelloWorldBuild/GreetInterface"/>
+  <wsdl:binding name="GreetInterfaceExport1_GreetInterfaceHttpBinding" type="this:GreetInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sayHello">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="sayHelloRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHelloResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GreetInterfaceExport1_GreetInterfaceHttpService">
+    <wsdl:port binding="this:GreetInterfaceExport1_GreetInterfaceHttpBinding" name="GreetInterfaceExport1_GreetInterfaceHttpPort">
+      <soap:address location="http://localhost:9080/HelloWorldBuildWeb/sca/GreetInterfaceExport1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
