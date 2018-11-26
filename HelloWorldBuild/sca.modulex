@@ -15,7 +15,11 @@
     </extensions>
     <extensions>
       <extendedObject href="HelloBpelProcess.component#//@Component"/>
-      <extensionObject xsi:type="com.ibm.wbit.wiring.ui.ext.model:NodeExtension" type="{http://www.ibm.com/xmlns/prod/websphere/scdl/business-process/6.0.0}ProcessImplementation" unknown="false" visible="true" x="30" y="30"/>
+      <extensionObject xsi:type="com.ibm.wbit.wiring.ui.ext.model:NodeExtension" type="{http://www.ibm.com/xmlns/prod/websphere/scdl/business-process/6.0.0}ProcessImplementation" unknown="false" visible="true" x="256" y="30"/>
+    </extensions>
+    <extensions>
+      <extendedObject href="GreetInterfaceExport1.export#//@export"/>
+      <extensionObject xsi:type="com.ibm.wbit.wiring.ui.ext.model:ExportExtension" type="{http://www.ibm.com/xmlns/prod/websphere/scdl/jaxws/6.0.0}JaxWsExportBinding" unknown="false" visible="true" x="30" y="30" bound="true"/>
     </extensions>
   </extensionmodel:ExtensionMap>
 </xmi:XMI>

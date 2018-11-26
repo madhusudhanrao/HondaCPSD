@@ -90,6 +90,41 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>was6-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                    <id>integration-test</id>
+      			    <phase>integration-test</phase> 
+                        <goals>
+                            <!-- <goal>wsDefaultBindings</goal> -->
+                            <goal>wsStartServer</goal> 
+                            <goal>wsListApps</goal>
+                            <goal>installApp</goal>
+                            <goal>wsStartApp</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                	<wasHome>${env.WAS_HOME}</wasHome>
+                    <!-- <wasHome>${was6Home}</wasHome> -->
+                    <conntype>SOAP</conntype>
+                    <host>localhost</host>
+                    <port>8880</port>
+                    <profileName>qbpmaps</profileName>
+                    <verbose>true</verbose>
+                    <user>admin</user>
+                    <password>admin</password>
+                    <username>admin</username>
+                    <earFile>${project.build.directory}/${artifactId}App.ear</earFile>
+                    <updateExisting>false</updateExisting> <!-- this needs to be false as we're reinstalling each time -->
+                    <applicationName>HelloWorldBuild</applicationName>
+                </configuration>
+            </plugin>	            	
+			
 		</plugins>
 	</build>
 </project>
